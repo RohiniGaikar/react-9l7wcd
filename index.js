@@ -19,14 +19,17 @@ import './style.css';
             {
               name: 'Jordyn',
               active: true,
+              deleted: false
             },
             {
               name: 'Mikenzi',
               active: true,
+              deleted: false
             },
             {
               name: 'Jake',
-              active: false
+              active: false,
+              deleted: false
             }
           ],
           input: '',
@@ -35,6 +38,7 @@ import './style.css';
         this.updateInput = this.updateInput.bind(this)
         this.handleAddFriend = this.handleAddFriend.bind(this)
         this.handleToggleFriend = this.handleToggleFriend.bind(this)
+        
       }
       handleAddFriend() {
         this.setState((currentState) => {

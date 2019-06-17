@@ -38,7 +38,26 @@ import './style.css';
         this.updateInput = this.updateInput.bind(this)
         this.handleAddFriend = this.handleAddFriend.bind(this)
         this.handleToggleFriend = this.handleToggleFriend.bind(this)
+        console.log('Constructor')
         
+      }
+      ComponentDidMount() {
+        console.log('---ComponentDidMount-----')
+
+      }
+      ComponentDidUpdate(){
+        console.log('---ComponentDidUpdate-----')
+        API.fetchFriends()
+        .then((friends) => {
+          console.log('FRIENDS', friends)
+        })
+
+      }
+      ComponentWillMount(){
+         console.log('---ComponentWillMount-----')
+      }
+      ComponentWillUnmount(){
+         console.log('---ComponentWillUnMount-----')
       }
       handleAddFriend() {
         this.setState((currentState) => {

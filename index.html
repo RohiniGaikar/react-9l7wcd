@@ -8,8 +8,32 @@
 </head>
 <body>
   <div id='app'></div>
-
-  
+<script>
+  window.API = {
+    fetchFriends() {
+      return new Promise ((res, rej) => {
+        const friends = [
+            {
+              name: 'Jordyn',
+              active: true,
+              deleted: false
+            },
+            {
+              name: 'Mikenzi',
+              active: true,
+              deleted: false
+            },
+            {
+              name: 'Jake',
+              active: false,
+              deleted: false
+            }
+          ]
+       setTimeout( () => res(friends), 2000)
+      })
+    }
+  }
+  </script>
 </body>
 </html>
 
